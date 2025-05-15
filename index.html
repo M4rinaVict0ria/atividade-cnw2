@@ -9,29 +9,34 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1c1c1c;
-            color: #fff;
+            background-color: #121212;
+            color: #f4f4f4;
         }
 
         header {
-            background: url('https://upload.wikimedia.org/wikipedia/commons/2/2b/The_Last_of_Us_Part_II_logo.svg') no-repeat center center;
-            background-size: contain;
-            height: 200px;
+            background: url('https://cdn.akamai.steamstatic.com/steam/apps/1374960/ss_15f8a50b49739c41782b0417ab6970db0871cbb0.jpg?t=1595011779') no-repeat center center;
+            background-size: cover;
+            height: 400px;
             text-align: center;
-            padding: 40px;
+            padding-top: 120px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
         }
 
         nav {
             background-color: #333;
             text-align: center;
-            padding: 10px;
-            position: sticky;
-            top: 0;
+            padding: 15px;
         }
 
         nav a {
             color: #fff;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-size: 18px;
         }
@@ -41,40 +46,46 @@
         }
 
         main {
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 40px;
+            padding: 40px 20px;
+            text-align: center;
         }
 
         h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f1c40f;
         }
 
         p {
             font-size: 1.2rem;
             line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            color: #ddd;
         }
 
         .image-container {
-            text-align: center;
-            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap; /* Permite que as imagens se ajustem em telas menores */
         }
 
         .image-container img {
-            max-width: 100%;
+            width: 300px;
             height: auto;
             border-radius: 10px;
+            border: 5px solid #444;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
         }
 
         footer {
             background-color: #333;
             text-align: center;
             color: #fff;
-            padding: 15px;
-            position: fixed;
+            padding: 20px;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
@@ -96,23 +107,34 @@
     <main>
         <section>
             <h2>Sobre o Jogo</h2>
-            <p>"The Last of Us Part II" é um aclamado jogo de ação e aventura desenvolvido pela Naughty Dog e lançado em 2020. A história segue Ellie, a protagonista do primeiro jogo, enquanto ela navega por um mundo pós-apocalíptico devastado, repleto de inimigos humanos e criaturas mutantes.</p>
+            <p>"The Last of Us Part II" é um jogo de ação e aventura de mundo aberto lançado pela Naughty Dog em 2020. O jogo se passa em um mundo pós-apocalíptico e segue a história de Ellie, enquanto ela busca vingança e lida com os horrores desse mundo devastado. Com uma narrativa profunda, personagens complexos e um design de mundo incrível, o jogo é um marco dos videogames.</p>
         </section>
 
         <section>
             <h2>Personagens Principais</h2>
             <div class="image-container">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFRUXGBcXGBYYGBUXFRUVFxcXFxUVFRcYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0mICYtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgEAB//EADwQAAEDAwIEBAQEBgECBwAAAAEAAhEDBCESMQVBUWEicYGRBhMyoSOxwfAUQlJi0eGCFfEHFiRDU3Ky/8QAGgEAAgMBAQAAAAAAAAAAAAAAAwQAAQIFBv/EACkRAAICAgICAgIBBQEBAAAAAAABAhEDIRIxBEETUSIycWGBocHRFAX/2gAMAwEAAhEDEQA/APn5b3URurrt4jCHouK24g+SIPPiRDSeqrqsyuExzVRTaLbouDSotdnKiKy8XyVHZadlgcQZlEtundUG45UmFRJlOgrUSZJXGnxEqukZKI4fba3dpn0G6zJ1thIK9I5Xc4AAZO+/0jl6rNcScST9Xrn88rW3dTJ0QADkyd42gDP2HfkgLuxDmkmHHsGt/wDzn80jGW7Z0JQ1SBeEUTUAc5zvSAAOmSAnLeEgmQ1x/uc8NB8jz9JVHBNLWgQTGA2WjYbkkjcyjLq6qAH8NpHMB0x56SJWJSd6NKKrYurWTm/SxpjmHT98Jbd3jdn0vWZ/OceqIqX+qWuaAR0kY6g8vul91Wk6XHuNWD6O/XHqiwT9gpv6ByWu+n84P+/RUVRHUeY/WcKNZgB8QI7qGnmH+8z9pR0hdsiTjB9JKtsrkseHBxBBB6x5jmFUQ3nHm0x7g7qXywBuPffyWjNm2uuI/OLZADoBIBx5icr1bxQEm4DfCo0U3wSz6XHfSf8ACbVfqC1BUjM3bsOtLg/SUegLOC4JoKaxLsJj2ioFSDyrDRUCyFgJQRSvCFYy/ICD0rulSi7DWcRd1RbOIbApPCnClIu2Om3clTFZJWvhEU7jClE5DP55Xv4gpe25lWfPCnFF8gk1iufPKH+aF1TiiWXGuVz55VJUSVOJOTPnL5Ki0GVc4hepxKapnPVEarDCiKJKLq7KtlRUr9Edeyl1sYU2UleairqOhTZEdc0KVOmqadQyjGO7K02iUmcpN3KusXRvhRcfCV0DwocvyuwqfGqBbrir2OFOnOkHkYEnJmNz3KKaatRwbmTyGyqNqJncg9QM+u61nwbZt1PeTJAbvyncBc3JJRR1MUHOVFFX4W1taWnS4CD3KScQ4BcMPh0u95/NfSa9ZoEDJ6c0h4ncad3sB6JaOaQ+/Ggz59VsKpEuZBacRnzjr5c5KVXNMglp2k+QPbstzeXLTgVAf/q0lZzjdEGHgOHI4ITeLLbpoRz+Moq0Z4VcQSY+3qh6ggom5YJwc/Zw/QoQp2Jz5L0dNbrnvsfXqoPeDy9youUFsCxjwF0V2jrIPsT+gW0PJfP6Dy1wcORlbmnWDgHNMg5WkQY2bfGmYKVWJ8SbQhyWwsNI8HFcJXYXoWaN2RAXQuwugKUSzy7K8VyFKJZKVwlXVaIbEndVOjkqI9MiCptcoLoULLNSu+bhUMUy0dVCrPOrFS/iF6xs3VXhjYk9eXdPP/LrG4e/PshzyRj2Fx45T6Pk3yirKNKCrHOUWvynHJnN4pFlcYQzaZRlQyFOnCkXRJRsCNIqwU85RjoVUZVt2SKoo+XGytbsr9AUm0gpyLrZS8Q0BEBkhV3DfEArdWlCe0wulJWWNtwTtJwTthvLJ2Tv4crgVHAbEAYyMJBwim1xfImoMEEnn9JjaNlovh1gB2GGgl2dyds7DC5WXSpna8dXJUOq1T+okDoPq7pPdNeDNOixo/qqEAnv1TO6vaPOo0eoSLiHF7Vh1Go156fUlYpt6OhKUa2wa6+aN6rGt/tbPnlK763cWHczzcYJ9AMKdPiTKznaYgCYA2SriPxMAwMDZcMEpmEJN0kK5JwStsS3NBz/AAhv04nfKrdZvAE/dWu43UIOkADmQMoQ3b3ZLiV0IqaRypSg2V17eEOQmtsdQyga9KHR+8rcJemAyQ9orZTnHVbbh9ppZHKTHksraUvxg3oPutpTcRARF9mNJ0E2DYenAaENZWn8xRtGlJhDlNWEijgprhYi3WhCHeqTs3KNdlMLoC6V5aMl13S/BnYpIS/qtE+lqt3TymPRZ+jTJO6HC3YbJxXH+qPPr1TEnZeOuN0zs+HatyV68sQ3ckBRyp8SlFNchQ7XyK6A/qr6jGhwyVYGSYCjlRSSYGA/+pdl4/mTOnwZ264eHwMnKilfTK19AVCvVYdbXwUHecWqlxLqjiVrrOxpClqe2e6yfE2U/mHSDCDKSY5jhxExC6Gq7SvELpcjh8CTsCEO95CIdmFc2iFlGmhb/EnVCMpmSrTZt3hdYwAq7IjlXdeaYUn5Ksp0VV6LStlNQ+ML1Z2VyPEVyqVj6NTeyy3dpqsqDkdLh/Uw7jzG62djYO+XWpt06iQQf5S1wBBHbf2WFIMStV8M8TzT5fhhp7mmcH2d9kh50faOt/8AMyLp9+gHiHwoxrJqVXauZAAH5LF8R4M2Toe5w7xA9l9eva1F31n8kntuH0X1NZ1PAyAYA8zCTx+RKJ0sniwn2jP/AAn8IOLSXEgOEnljks98S8DFGpA2O0r7NZUQ47z/AGg4j0Xzr/xCB+bsMTt2RMWaTyWCz4ILHSXRh7e3g5HrmPsrqVqXHGR1CK4dcZIP+x3V9xduaMbpyU5XQgoQ4lD6WnCWVyNcnZWvuiTlCVzPsiQi72L5Wq0XWbia2sQIIicei2gdss7wqze0McNjn3/YWiblGObOf5WaHg79WJ5K6kSHpTw2ppdK7VuzqJBQHj2M/OlBNj24rIaEPSugRKrN4iRjRt5U9hZBVerKDrX0YKEfXHVbpmfkSNFcX4ZR0cz+qUUnd0K6q3mp62tysrHV17NvNyav0OaV3pAgoO5uS45MoUXrYUH3Td1l4m3ZfzJKkWRqKa8NDW7pQLgATCst7sFYyYnxouGRNmkN8CIBwk9xfDVjbqh6shurkqyS5sABCx40nZrJNml4fX+ZR+XIyknEbYMeQQgWXYp8zPZUVOJyZOSiQxO39GpeUml9izUuSp/KUgzKetHOpkXYCr/j45Ims3CDNkVlGtlo4h2RNJ8oe34S50kYA3J2CpoXzdeifInYquUbpdmuEkuTWgsjxIig/fPJUkZVtuwhrnFVJriTGnyKW8yvVBK6zZdKj7MNnHNaMEorg9wGmRsx0Hr4sIM0ZMq20qhpLXbP7c+RQvIipQYz4mTjkQ7vPEQ4GWzHVN69ZtChPMifss7b1yzU3JE485gk9kXxO4BNNrydLRJaB05OK4ksbTo9NDNF7Y4+HuIspUm/NJa95LpIMGdhq22jCxXxlxek9+HSZMwnHEuIucYMaQYAG2IH+Vl+J2NJ7nHbfPcFMYca5WxbyM1xaihA641O1DBH3RLrkO7FKq1PSSN4UQ89V0njT6OP8zWmX1TBVVLcz+5XHVJVlKn15z9hK2lQGcr6NfwfSaTQOXqjiBusNwziTqLurT9Tf1HQrZWty17Q5pkH9wVdCM4NMtFRelceVEK6Ka0Ta5yIst1CkIVtv9ShqFEOIUSdkM62djCPq3Gk5VdW6atBWB1KJkIu6olzQAqjVCLqVg0CVSbKQvq27gAFdSsS+BspurgphbgxICqU2kagrZXUtQ2GnZUW9tqdpGJVtZ5O6vovY0TPi5JeUmhhRXZyvQcxmk5hC0XOmT7LUDgksaXPguQPFuAGmNTXShxyw6D5MM6sRXdPVkDKBFqVs+A/DwqtDnvgnknZ+CafU+62vJjHQL/yTe9Hys1VynUyhdUqWpM2xSw97pRdhbtdLnGGjfulTH4XqwcWEAkeSzNSlGovYXDKKknJWgrjXGAfw6eGc+57LO1aYcZXaltUAkiR2UKTpQIw4aGpZPkdhtlxEs8L9uTunYp+X/hT1WVdT35ouyr1Q0NOafKcR5dUTn9gljabcRprUXVQNyAga1wdmnJXeK0RQphxGqq76SckdYHJZedXSRI+JKm5MOdctG7h7oG5e5we5pwOvl/2XKdoGUwXDVVf4nOduwf0t6ee6A4xdFrdDTjn3WHJzdBI4litn0C3tdTSxuHNYA3u0AA+uB7pZW1AHXzMeunl0zPso/D3GDWptf8ARVbjUNiR1HcckbdfjkFvhcHAVGbwZw4dR/lK5IuMtj+GSlHXYQbe1oUQ6trql+TmInMRPms9xG5o1G/g2wDcklzjmOrQmVSiD4XRLd+YIAJ9OW3VRvbAkDTDdsbAwJ29gsw09hZSdUjG39wRgNpjMEDkl1Z5O4/0tVf2DGEmdgDE5k/rKz3EHgHwgAHlH5J7HJPpHNzJ9ti+m2SjHbgdP1VTGhoUXVICL2xaX4xr7KKoyfNG8H4kaLjglp3HfkQgCVxEBtWaWn8SA70yPIg/omFnxalU2dpd0dg+nIrGudgY/wBqKhmWOJ9D1oiyElYXhXFXUnCSXM5t3juFteHXAeNTDI/eCpowoUwy5ttXNC1rXbKsuHuCHdcla2aZYKGQiK9HVCE+eZRFaqQAq2UkSbZ43R3zS1sfdLKVw6UaA53OOyFkr2Gx36KjUIU30JIjCrrMdhSqVcb5Cw6fRtX7NTxi5D6DWgw4QpW/FmMa1tQg8lmKL3uEGSETa29J7PEDM90q8aSpj8Zye0P6VWi6q003Fomd8LXs4nSAHjHuvmbrZjdtX3Q72idnfdY+NP2a5P2jOtt+6gKBVrn5UhVT3M4+iDbcroBUxXXmvVqZl0dpVCq63DPmZaIcenPzTSzstRkiB90+o0mURsC47Dk3z6pfN5UY6W2P+P4k57ekY9nAnMAdWIA3DRku8zy+6VXlwXuJ2AwANgOgT74j4gZgkku9gAs1eXGkEiNkHG5Tdscmo41S/uWWOaonZuT+iJd+PXNR58FP7kZS3htYtpucdyd02fT0U2UwMxqPUk5P6IklUv8AH/Qadx/z/wAOXN7J+8pLxsCGmSSfb2TQ0YBc7HQJHxN4ccZjmiYl+WgWV/ix/wDA7wRUZzBDh+S0fF7llN1OoHaXkho7zyPULGfCFzorGdiIRnxfW8VDkMn7jP2VzhynQPHNxhaNR80/MOoQRkjqNw5p5j/CheXgaDkYjPbEHzQvxI17KNOpkPYRkZ8DuRI7oeiW3TJLQHDeJE+yUlDjv0dKElkVexBxLiQdkfUYPYGZSv5vMlaG6+H4MkaWCS4zyAJ3PkkPEbQ0zBI8hsO0807icWtHP8hShLZUXzlVVHLzThS0CJPoEfoV3JlS8urwVmTy60SraFHUY7Sp06cFZckEjjb2cp26b8BvjQccamuwRMEEcwgNeVyi/wAQH9yG22GSUejbULoVvpP/ABOD7IW+mYG6WPdAGPXp7Ii0vgCPmZHM8x59UKMzU4kqXzZ+lRr8RqtwQtHFOAQ4EcilvELam4yHBaWS3sx8cgKyvnOGW4Tiyug7bdL6VMNEByssHCm6dQVydoii0NKjHOx0VFMloIIyrzfM3Byhbm5kzKwpPorJClyQ14VUIbnoVK0J8U/1H80lt+KFpARtbik4GFiSd9G4eQuIyqFVVKhlLHXpGJUv4meariyPPYifuphkiVY44XKTCVrmKJFOk7plwS01vl2w/PkFGlT3T/hli5jQIjILj0n/AEhZs1RpDPieOp5E30gulRjPPl2QvFfC3UTBOB36/aUxdUAwBKznxNekHTtob7E5/wAJCNt0dyVJGZ4zW1vHPTj/ACk13tGJKudXzhUUaZfV8vyC62OPFb9HKyS5P+Q1tMD5bOQ8R9MlHUbwPc5x35dfL2ULCnrqPxgDT77/AKK6rwxzQTT0nzH7lCcldMJxforvGktz154EJMdGdTh6ST9lK5sqzzLzPLP6BWWPCSKjde2/qOSKuMV2BfNulEFFtUpODyx4bOHFpA99kTdVf4is0DDQAB5cz7ytrxbPD6jSNsjHIdMdl89tK+ktPTHotYsnyJv2gebGsUlH0zYcRpuLHMBL5aOp2H+Ek4BfmlUg4nB803tLzDDOxB9Jz9ktvOHkXRbyLgWnqDsVilTTCwlUk0aX4nrgW0D6qnLnG33WU/6cCJM43JOMDZaLi34j2sbMCCT2H7+6C4wyKbaTR4nnT6HLj6D81nEuMUi88uc3IT8P4K94YWtk1DAb/acz6boLizCyo6mW6S0xB3xzX0ngjBTim1snTv8A0tnaP7oPoO6Uf+JdSlopNLQaxzq2cGcgeuequGdyy8aJPx+OHlZgAQplnTKg1slMbbh0pqUlHsUhByOWjwMQJI5ctjn2XHGU3ZYNY2Yz1S19KCUupqT0N8HGNMpLVXSZuehCnXqKFJ+Ci7oC6s0DTLRC4+mqOG15bCJouyQY7TseyUdpjC2gIVi1xAOJ+nv1Cv8AnnohKvic47co780XbUy+IHZMxaXYpNNvR41z0XQ89FZUs6gMaU9suHAsh28KSzRiZUGzP6ivfNKdu4eCZhKq9o6TGykcsZdFRTT30RY44Tq0axzfFv1SZts4CSVc1+Fma1omSUeWkMv+mVCC5uW9UPrIwVouE1P/AE7W9SB91vGcNohrRoGw5JKXlODpoZj4amrTo+OimRuiG04hCU687ooVgIVybFY0NeHURqBIwM+cbBN3PLgJkD6j3O2Un4fVlrn8tgi31jpAAzqaPSUvJWzseNFRx39jOkGtILj9icLBceuzUc6eZJ/f2Wt4nxAsY4czI9NisBxtrnObExpIx1nfvy9kXx4XI35E6iBvtgAXTAGUZwqi0U3VOZ6oAUDBaXT25Du48h25qxtQtpBk7mB6p6SbVWIxdO6HfBKWlkn+Yz7p3RttQ398e6AoUtLabeyM4fXAcZGoRsdoSc9uxqGlQFxCzLXCSOREGREquoADPSCmHEjq8RxjA6dEttSHgql0W9MaVamq2rAGQWkx0wdpXzanzW/ptIp1R/aR6wsDR3TnidMS83uIbw+5O3otWxhc6nVP8jXD1JGn2Bd9ljbX6oHNbG1raWAHsSO5gx+Xst5dMDi2i9rmjcwTk+X+FTwmnrcazu+meTeqDuWucDG7zpHYHePRNCfw2saI1nT/AMGxr5RnDfUoM3URjHHlIa8NODUJLcF07Q0DA9G/qvm/xBxI3Fd1Qkxs2eTRsFuPjK+FG0FNp8VWG+TRl59TA9F83V+HDubL83J1jXokwwmVjelqWNUw5NTipaYpCfE0wuA4RzKW1+aHsXv1DcoiuM+aXUOMqG1PlGwDRM4n1XgOUBQGXQSQFKu0A+EyBz79kx/QWT9hPDq2k/ZaOrRa1gd6/v7rI0qkGYnMpje3ocCAHCQBmI77IOTG3JBIZPxaPWjg9nQgk+5lNeA1YqaD/Nj15JBwyoA7KPqVCDOxCk1towtxs+h0bQHdU1aRbKI4DdCtSDgcxnz5qx4kEc1yubTpl1oWUHweqsZZB0lG0bXBJV+BA2VvLvRSj9iK9sRGlLzakZhaC6aDlTNvDB3Rl5DSMuHKyjhTvoHcLc3N4AQJ5BYWkyDgxCsr8UzvOEDIubsc8fKoxpmHpNcVcGumCmv8OJkey7Y0NdZrY5z6BNfLZz4422khxTo6KbW9InuT/tRq8RZTJ+YYAAPOSZiABzUL651FwHIj7JPxV/4zJ5hBireztyfGNL0XVL0VGucGObLiBqOY8uiUXLg7BjbZM798BrdsF3mSUkpt8ZI6em4CNBdsHL0i2pZNa0DyxyQlvT+ZXYwcs+yLu6mRPmq/hinNVz+mEWDai5MFOnJRRqLljgAJbtGxH6oehVcJGkRzz08wi6jhidhuUM66YZEGOsJVSYdxRTf37cS10HAMAj7Kn4fuaIc6XRnmCheLVwazWAGANZnrsP1XeE04DjGSUZpKAJNuQ8unM+TULXB0McSR3nsvmlMwVvLqpFtXP9n5yFggmPEX4sV817j/AAGcNP4o9fylae34XUq0zXLg1oLgBzcRv5CVm+HM8Tj0b+ZH+034dWLmlmo6J2kwTzRcnYHF0MrRux6CfdH8IGqpr3A8LfcknHefZLXPhjo5fkAj690Laz+Z/OQGtB5uIgn2kpXKrpL2OYGlcn6Mt8Y8RFa4On6WDSPTcpK0rjnSZO5UqTZMJ6MVCKQhKTnJv7OQi7W0nOURQtIyQmVvXaB1PYIM8v0HhiXsoZagcifPZUX3hwjal27k3HdLr8nmhwty2GlSWgN0E56rtw0wOioLla92E1QsmnZVsph84UHLzd1YO6ZdaGHAp7e2/ha7kUhhaLhlQ1KZadxsl82qkMYlacS/4Z4maTnM5O/Naq0vQ4kyvn1U6T3C0XCCXQAfCRMpTPiT/Ix06Ngyrq2Q9xtKzzb1zH6e8T2TKtcFzAAeeUp8bRafJFoDjywuVuIAEduStpXQa2CgrkAuzzUS3spqkE3T5bqA3SlzBzKZvOAAlFcHUYVoLjSb2Eubp8RV9i4BjqvPb/K8vLSWrCYEuYvZVLn9kNxo/S7ovLyLH9kMy/VkL+uCGuH9A98/5Sezqlxx+x+yvLyYgkoNg5P8kEcRfAcegT34d4WWUW4Op2T6ry8h5HWNEgryDO8aWtOP+6X2TZBk439BuV5eQYBZumIaL/m1KtTcYA8uqYW9RcXkxkVNr6AY9pP7JXr9VtX7AfmVigvLyY8X9X/Ir5f7L+Bpw2mYf/xH5o7hEgY6leXluTBxGNRv4LiRkkjHIOdHIdCg/j27/EZQacU2jV01nf22Xl5Dgk5r+/8AoLN1jde6/wBmWhFcNeA8EiRt5TzXl5My6FofsP6tWl/8rfL9EOb2mP8A3Gn/AIleXkFYFXYaWdp9A1W/aT/gFU1KgfgTPdeXlbgo9Fxk5di5ylK8vIwD2RautXl5QpBLRLUx4JcaXwTgry8gTVpoZg6kmEcXtYOrqrOElxBaCZG3kvLyXu8YScVzoZ29o4HUXSe6Z0bhwGYXl5KybfYThFLRW651YVYaeRlcXlfEDKCCaTpGSqXVGhcXlXBGao//2Q==" alt="Personagens">
+                <div>
+                    <img src="https://sm.ign.com/ign_br/screenshot/default/ellie-the-last-of-us-2-cosplay_2nyf.jpg" alt="Ellie">
+                    <p>Ellie</p>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnpwQtvVLxy-bQGCxJ97uSU56iaIbH385abA&s" alt="Joel">
+                    <p>Joel</p>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOAsL4vuxFV-XoSN8oHbVurVD1l_fMSM_hoJpWe-mMYzsgyMDvTMOnWQtmZMAeC_pIlA&usqp=CAU" alt="Abby">
+                    <p>Abby</p>
+                </div>
             </div>
-            <p>Os principais personagens incluem Ellie, Joel e Abby. A trama foca no impacto emocional e nas escolhas difíceis que cada um desses personagens enfrenta em um mundo implacável.</p>
+            <p>Os principais personagens incluem Ellie, que é a protagonista, Joel, o personagem icônico do primeiro jogo, e Abby, a personagem que se torna central na trama. O jogo explora suas emoções, motivações e as difíceis escolhas que eles enfrentam.</p>
         </section>
 
         <section>
             <h2>Galeria</h2>
             <div class="image-container">
-                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202311/1717/50816ed9cb59ebc484b9d6c9b19b34a953b6ce384ea2dbad.png" alt="The Last of Us Part II">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpjkGQ5NlQcWdlV9IMH0O9q91stSYkNrk7DQ&s" alt="Cena do Jogo">
             </div>
-            <p>Uma das características marcantes do jogo é sua impressionante qualidade gráfica, criando uma experiência imersiva que conecta o jogador ao mundo do jogo de maneira única.</p>
+            <p>O visual do jogo é um dos mais impressionantes de sua geração. A atenção aos detalhes, os ambientes realistas e a iluminação criam uma atmosfera intensa e envolvente, complementando a história emocional e complexa de *The Last of Us Part II*.</p>
         </section>
     </main>
 
