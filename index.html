@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Last of Us Part II</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -18,7 +22,9 @@
             background-size: cover;
             height: 400px;
             text-align: center;
-            padding-top: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         header h1 {
@@ -26,12 +32,19 @@
             font-weight: bold;
             color: #fff;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            background-color: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 10px;
         }
 
         nav {
-            background-color: #333;
+            background-color: #1f1f1f;
             text-align: center;
             padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
         }
 
         nav a {
@@ -39,15 +52,24 @@
             margin: 0 20px;
             text-decoration: none;
             font-size: 18px;
+            padding: 8px 12px;
+            transition: background 0.3s, color 0.3s;
+            border-radius: 5px;
         }
 
         nav a:hover {
-            color: #f1c40f;
+            background-color: #f1c40f;
+            color: #121212;
         }
 
         main {
             padding: 40px 20px;
-            text-align: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 80px;
         }
 
         h2 {
@@ -59,8 +81,6 @@
         p {
             font-size: 1.2rem;
             line-height: 1.6;
-            margin: 0 auto;
-            max-width: 800px;
             color: #ddd;
         }
 
@@ -69,25 +89,49 @@
             justify-content: center;
             gap: 30px;
             margin: 30px 0;
-            flex-wrap: wrap; /* Permite que as imagens se ajustem em telas menores */
+            flex-wrap: wrap;
         }
 
         .image-container img {
-            width: 300px;
+            width: 280px;
             height: auto;
             border-radius: 10px;
-            border: 5px solid #444;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+            border: 4px solid #333;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .image-container div {
+            text-align: center;
         }
 
         footer {
-            background-color: #333;
+            background-color: #1f1f1f;
             text-align: center;
-            color: #fff;
+            color: #aaa;
             padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 10px 10px;
+                font-size: 16px;
+            }
+
+            .image-container img {
+                width: 100%;
+                max-width: 300px;
+            }
         }
     </style>
 </head>
@@ -98,19 +142,24 @@
     </header>
 
     <nav>
-        <a href="#">Início</a>
-        <a href="#">História</a>
-        <a href="#">Personagens</a>
-        <a href="#">Galeria</a>
+        <a href="#inicio">Início</a>
+        <a href="#historia">História</a>
+        <a href="#personagens">Personagens</a>
+        <a href="#galeria">Galeria</a>
     </nav>
 
     <main>
-        <section>
+        <section id="inicio">
             <h2>Sobre o Jogo</h2>
-            <p>"The Last of Us Part II" é um jogo de ação e aventura de mundo aberto lançado pela Naughty Dog em 2020. O jogo se passa em um mundo pós-apocalíptico e segue a história de Ellie, enquanto ela busca vingança e lida com os horrores desse mundo devastado. Com uma narrativa profunda, personagens complexos e um design de mundo incrível, o jogo é um marco dos videogames.</p>
+            <p>"The Last of Us Part II" é um jogo de ação e aventura lançado pela Naughty Dog em 2020. A história segue Ellie, agora mais velha, em uma jornada intensa marcada por vingança, dor e escolhas morais. O jogo é conhecido por sua narrativa forte, gráficos incríveis e ambientação emocionalmente carregada.</p>
         </section>
 
-        <section>
+        <section id="historia">
+            <h2>História</h2>
+            <p>Após os eventos do primeiro jogo, Ellie vive em Jackson, Wyoming, tentando encontrar paz. Porém, uma tragédia muda tudo, e ela parte em busca de justiça. Ao longo do caminho, confronta o custo da vingança e descobre mais sobre si mesma e os que estão à sua volta.</p>
+        </section>
+
+        <section id="personagens">
             <h2>Personagens Principais</h2>
             <div class="image-container">
                 <div>
@@ -126,20 +175,20 @@
                     <p>Abby</p>
                 </div>
             </div>
-            <p>Os principais personagens incluem Ellie, que é a protagonista, Joel, o personagem icônico do primeiro jogo, e Abby, a personagem que se torna central na trama. O jogo explora suas emoções, motivações e as difíceis escolhas que eles enfrentam.</p>
+            <p>Os personagens principais são profundos e marcantes: Ellie, a protagonista central; Joel, figura paterna e peça-chave da narrativa; e Abby, que traz novos pontos de vista e complexidade à história.</p>
         </section>
 
-        <section>
+        <section id="galeria">
             <h2>Galeria</h2>
             <div class="image-container">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpjkGQ5NlQcWdlV9IMH0O9q91stSYkNrk7DQ&s" alt="Cena do Jogo">
             </div>
-            <p>O visual do jogo é um dos mais impressionantes de sua geração. A atenção aos detalhes, os ambientes realistas e a iluminação criam uma atmosfera intensa e envolvente, complementando a história emocional e complexa de *The Last of Us Part II*.</p>
+            <p>As paisagens de Seattle, os detalhes dos personagens, a iluminação e a direção artística de *The Last of Us Part II* contribuem para uma experiência visual cinematográfica e imersiva.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 The Last of Us. Todos os direitos reservados. Desenvolvido por Naughty Dog.</p>
+        <p>&copy; 2025 The Last of Us. Todos os direitos reservados. Este é um site não oficial criado para fins educacionais.</p>
     </footer>
 
 </body>
